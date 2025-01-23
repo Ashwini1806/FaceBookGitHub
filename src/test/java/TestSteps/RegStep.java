@@ -50,4 +50,12 @@ public class RegStep extends BaseClass {
 	public void user_should_select_gender() {
 	   rg.selectGender(); 
 	}
+	
+
+@When("enter valid username and Password")
+public void enter_valid_username_and_password() {
+	rg.enterUserName();
+	rg.enterPassword();
+	
+}
 }
