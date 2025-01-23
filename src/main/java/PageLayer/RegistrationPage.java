@@ -32,6 +32,12 @@ public class RegistrationPage extends BaseClass{
 	@FindBys(@FindBy(xpath="//input[@type='radio']/parent::label"))
 	private List<WebElement> gender;
 	
+	@FindBy(name="reg_email__")
+	private WebElement uname;
+	
+	@FindBy(name="reg_passwd__")
+	private WebElement pass;
+	
 	
 	public RegistrationPage()
 	{
@@ -67,6 +73,16 @@ public class RegistrationPage extends BaseClass{
 	public void selectGender()
 	{
 		RadioButtonHandle.RadioButtonHandle(gender, "Male");
+	}
+	
+	public void enterUserName()
+	{
+		WebElementHelper.SendKeysValue(uname, "Manish@123");
+	}
+	
+	public void enterPassword()
+	{
+		WebElementHelper.SendKeysValue(pass,"123456789");
 	}
 	
 }
