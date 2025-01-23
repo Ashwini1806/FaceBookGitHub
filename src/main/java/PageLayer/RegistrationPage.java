@@ -9,8 +9,11 @@ import UtilityLayer.WebElementHelper;
 
 public class RegistrationPage extends BaseClass{
 
-	@FindBy(name="")
+	@FindBy(name="firstname")
 	private WebElement firstname;
+	
+	@FindBy(name="lastname")
+	private WebElement lastName;
 	
 	public RegistrationPage()
 	{
@@ -20,6 +23,11 @@ public class RegistrationPage extends BaseClass{
 	public void enterFname()
 	{
 		WebElementHelper.SendKeysValue(firstname, "Manish");
+	}
+	
+	public void enterLname()
+	{
+		WebElementHelper.SendKeysValue(lastName, "Patil");
 	}
 	
 	
