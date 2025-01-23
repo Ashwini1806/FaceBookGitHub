@@ -28,4 +28,21 @@ public class RegStep extends BaseClass {
 
 	}
 
+	@When("User should enter valid BDate")
+	public void user_should_enter_valid_b_date() {
+	     rg.enterBdate();
+	       
+	}
+
+	@When("User should enter valid BMonth")
+	public void user_should_enter_valid_b_month() {
+	     rg.enterBmonth();
+	       
+	}
+
+	@When("User should enter valid BYear")
+	public void user_should_enter_valid_b_year() {
+	     rg.enterByear();
+	       
+	}
 }

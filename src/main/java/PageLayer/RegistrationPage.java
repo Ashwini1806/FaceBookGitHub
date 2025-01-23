@@ -19,6 +19,13 @@ public class RegistrationPage extends BaseClass{
 	@FindBy(name="birthday_day")
 	private WebElement date;
 	
+	@FindBy(name="birthday_month")
+	private WebElement month;
+	
+	@FindBy(name="birthday_year")
+	private WebElement year; 
+	
+	
 	public RegistrationPage()
 	{
 		PageFactory.initElements(getDriver(),this);
@@ -39,5 +46,16 @@ public class RegistrationPage extends BaseClass{
 		HandleDropdown.selectDropdown(date, "17");
 	}
 	
+	
+	public void enterBmonth()
+	{
+		HandleDropdown.selectDropdown(month, "May");
+	}
+	
+	public void enterByear()
+	{
+		HandleDropdown.selectDropdown(year, "2024");
+	}
+
 	
 }
