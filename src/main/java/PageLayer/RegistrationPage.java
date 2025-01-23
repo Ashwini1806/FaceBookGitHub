@@ -1,11 +1,15 @@
 package PageLayer;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import BaseLayer.BaseClass;
 import UtilityLayer.HandleDropdown;
+import UtilityLayer.RadioButtonHandle;
 import UtilityLayer.WebElementHelper;
 
 public class RegistrationPage extends BaseClass{
@@ -24,6 +28,9 @@ public class RegistrationPage extends BaseClass{
 	
 	@FindBy(name="birthday_year")
 	private WebElement year; 
+	
+	@FindBys(@FindBy(xpath="//input[@type='radio']/parent::label"))
+	private List<WebElement> gender;
 	
 	
 	public RegistrationPage()
@@ -57,5 +64,9 @@ public class RegistrationPage extends BaseClass{
 		HandleDropdown.selectDropdown(year, "2024");
 	}
 
+	public void selectGender()
+	{
+		RadioButtonHandle.RadioButtonHandle(gender, "Male");
+	}
 	
 }

@@ -45,4 +45,9 @@ public class RegStep extends BaseClass {
 	     rg.enterByear();
 	       
 	}
+	
+	@When("User should select gender")
+	public void user_should_select_gender() {
+	   rg.selectGender(); 
+	}
 }
