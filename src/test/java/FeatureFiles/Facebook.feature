@@ -7,3 +7,4 @@ Feature: Facebook Functionality
     And User should enter valid BDate
     And User should enter valid BMonth
     And User should enter valid BYear
+    And User should select gender
