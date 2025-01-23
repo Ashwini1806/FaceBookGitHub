@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import BaseLayer.BaseClass;
+import UtilityLayer.HandleDropdown;
 import UtilityLayer.WebElementHelper;
 
 public class RegistrationPage extends BaseClass{
@@ -14,6 +15,9 @@ public class RegistrationPage extends BaseClass{
 	
 	@FindBy(name="lastname")
 	private WebElement lastName;
+	
+	@FindBy(name="birthday_day")
+	private WebElement date;
 	
 	public RegistrationPage()
 	{
@@ -28,6 +32,11 @@ public class RegistrationPage extends BaseClass{
 	public void enterLname()
 	{
 		WebElementHelper.SendKeysValue(lastName, "Patil");
+	}
+	
+	public void enterBdate()
+	{
+		HandleDropdown.selectDropdown(date, "17");
 	}
 	
 	
